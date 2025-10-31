@@ -1,0 +1,191 @@
+:root {
+  --verde-folha: #4caf50;
+  --verde-principal: #4caf50;
+  --verde-menta: #a5d6a7;
+  --verde-escuro: #2e7d32;
+  --marrom-terra: #8d6e63;
+  --creme-claro: #f1f8e9;
+  --cinza-escuro: #424242;
+}
+
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: var(--creme-claro);
+  color: var(--cinza-escuro);
+}
+
+main {
+  flex: 1;
+}
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.font-open-sans {
+  font-family: "Open Sans", sans-serif;
+}
+
+.green-leaf {
+  color: #4caf50;
+}
+
+.green-mint-soft {
+  color: #a5d6a7;
+}
+
+.brown-land {
+  color: #8d6e63;
+}
+
+.light-cream {
+  color: #f1f8e9;
+}
+
+.dark-gray {
+  color: #424242;
+}
+
+.green-dark {
+  color: #2e7d32;
+}
+
+.bg-green-leaf {
+  background-color: #4caf50;
+}
+
+.bg-green-mint-soft {
+  background-color: #a5d6a7;
+}
+
+.bg-brown-land {
+  background-color: #8d6e63;
+}
+
+.bg-light-cream {
+  background-color: #f1f8e9;
+}
+
+.bg-dark-gray {
+  background-color: #424242;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--marrom-terra);
+}
+
+.btn-primary {
+  background-color: var(--verde-principal) !important;
+  border-color: var(--verde-principal) !important;
+  color: white !important;
+}
+
+.btn-outline-primary {
+  border-color: var(--verde-principal) !important;
+  color: var(--verde-principal) !important;
+}
+.btn-outline-primary:hover {
+  background-color: var(--verde-principal) !important;
+  color: white !important;
+}
+
+input.form-control {
+  border: 1px solid var(--verde-menta);
+}
+
+a {
+  color: var(--verde-principal);
+}
+
+a:hover {
+  color: var(--marrom-terra);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+.btn,
+.form-check-label,
+a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+/* Fonte para parágrafos e textos comuns */
+body,
+p,
+label,
+input,
+.form-control {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Fonte para títulos e elementos de destaque */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+.btn,
+.form-check-label,
+.form-check-label,
+.role-label,
+a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+/* Inputs */
+.form-control,
+.form-select {
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--verde-principal);
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--verde-principal);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--verde-principal) #f1f1f1;
+}

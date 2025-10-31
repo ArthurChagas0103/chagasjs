@@ -1,0 +1,23 @@
+.card-equipe {
+  transition: transform 0.3s ease;
+}
+
+.card-equipe:hover {
+  transform: translateY(-5px);
+}
+
+.icone-valor {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 400px;
+  }
+}

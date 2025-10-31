@@ -1,0 +1,26 @@
+#saveCouponButton {
+    background-color: var(--color-accent-dark, #2e7d32);
+    color: var(--color-white, #fff);
+    border: none;
+    padding: 0.7rem 1.2rem;
+    font-weight: 700;
+    font-family: "Montserrat", Arial, sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.08);
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+#saveCouponButton:hover {
+    background-color: var(--color-accent-darker, #1b5e20);
+    color: var(--color-white, #fff);
+    transform: translateY(-1px);
+}
+
+#couponForm #couponId {
+    opacity: 1;
+    background:#e9ecef;
+    color:#6c757d;
+    border:1px solid #ced4da;
+    cursor:not-allowed;
+}

@@ -1,0 +1,11 @@
+.note-btn.dropdown-toggle::after {
+  display: none !important;
+}
+
+.container-send-message {
+  background-color: #e8f5e9;
+}
+
+.note-editing-area {
+  background-color: white;
+}

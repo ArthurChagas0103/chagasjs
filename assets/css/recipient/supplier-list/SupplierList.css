@@ -1,0 +1,113 @@
+:root {
+  --primary: #4caf50;
+  --secondary: #e8f5e9;
+  --text-dark: #333;
+  --text-light: #777;
+  --radius: 8px;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+.supplier-list-container {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.page-title {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.filter-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.filter-container input,
+.filter-container select {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
+  min-width: 180px;
+}
+
+.sort-btn {
+  background: var(--primary);
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.suppliers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.supplier-card {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.supplier-card:hover {
+  transform: translateY(-5px);
+}
+
+.supplier-card .supplier-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.supplier-card .supplier-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.supplier-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.supplier-card .badge {
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+}
+
+.supplier-info h3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 2em;
+}
+
+.supplier-info p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 4.5em;
+}

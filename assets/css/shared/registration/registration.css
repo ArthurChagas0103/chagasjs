@@ -1,0 +1,71 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.title {
+  color: #28a745; /* Verde */
+  font-weight: bold;
+}
+
+.subtitle {
+  color: #6c757d; /* Cinza */
+}
+
+.role-label {
+  font-weight: bold;
+  color: #28a745;
+}
+
+.btn-custom {
+  background-color: #28a745; /* Verde */
+  border-color: #28a745;
+  color: white;
+}
+
+.btn-custom:hover {
+  background-color: #218838; /* Verde mais escuro */
+  border-color: #1e7e34;
+}
+
+.form-label {
+  color: #495057; /* Cinza escuro */
+}
+
+.bg-menta {
+  background-color: #e9f7ef; /* Um tom de verde claro */
+}
+
+.btn-verde {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+.btn-verde:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.link-secondary {
+  color: #6c757d;
+}
+
+.link-secondary:hover {
+  color: #5a6268;
+}
+
+.link-success {
+  color: #28a745;
+}
+
+.link-success:hover {
+  color: #218838;
+}
+
+.texto-principal {
+  color: #343a40;
+}

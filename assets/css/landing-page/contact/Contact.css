@@ -1,0 +1,40 @@
+.contact-form {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.contact-form .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.contact-form .card-header {
+    border-bottom: none;
+}
+
+.contact-form .form-control {
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+}
+
+.contact-form .form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form .btn-dark {
+    padding: 0.5rem 2rem;
+    font-weight: 500;
+}
+
+#sendMessageButton {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 0.5rem 2rem;
+} 
