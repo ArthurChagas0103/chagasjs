@@ -1,0 +1,83 @@
+<div class="py-5">
+  <div class="row justify-content-center">
+    <div class="card p-4 shadow-sm" style="max-width: 700px; width: 100%">
+      <div class="text-center mb-3">
+        <h2 class="title">Acessar conta</h2>
+        <p class="subtitle">Escolha o tipo de conta para acessar</p>
+      </div>
+
+      <div class="row mb-4 justify-content-around text-center">
+        <div class="col-md-6">
+          <input
+            type="radio"
+            class="btn-check"
+            name="userType"
+            id="userTypeRecipient"
+            value="recipient"
+            autocomplete="off"
+            checked
+          />
+          <label class="btn btn-outline-success w-100" for="userTypeRecipient"
+            >Beneficiário</label
+          >
+        </div>
+        <div class="col-md-6">
+          <input
+            type="radio"
+            class="btn-check"
+            name="userType"
+            id="userTypeSupplier"
+            value="supplier"
+            autocomplete="off"
+          />
+          <label class="btn btn-outline-success w-100" for="userTypeSupplier"
+            >Doador / Fornecedor</label
+          >
+        </div>
+      </div>
+
+      <form id="login-form">
+        <div class="mb-3">
+          <label for="email" class="form-label texto-principal">E-mail</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            class="form-control bg-menta"
+            placeholder="seuemail@exemplo.com"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="senha" class="form-label texto-principal">Senha</label>
+          <input
+            id="senha"
+            name="senha"
+            type="password"
+            class="form-control bg-menta"
+            placeholder="Sua senha"
+            required
+          />
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" class="btn btn-verde">Entrar</button>
+        </div>
+
+        <div class="text-center mt-3">
+          <a href="#" id="forgotPasswordLink" class="link-secondary"
+            >Esqueceu a senha?</a
+          >
+        </div>
+
+        <div class="text-center mt-3">
+          <p class="texto-principal">
+            Não possui uma conta?
+            <a href="#registration" class="link-success">Cadastre-se</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="supplier-list-container">
+  <div class="container py-5">
+    <div class="page-header mb-4 text-center">
+      <h1 class="page-title">Fornecedores</h1>
+
+      <div class="filter-container">
+        <input
+          type="text"
+          id="supplierFilter"
+          placeholder="Buscar fornecedor..."
+        />
+        <select id="categoryFilter">
+          <option value="">Todas as categorias</option>
+        </select>
+        <select id="locationFilter">
+          <option value="">Todas as localizações</option>
+        </select>
+        <select id="sortBy">
+          <option value="name">Nome</option>
+          <option value="category">Categoria</option>
+          <option value="location">Localização</option>
+        </select>
+        <button class="sort-btn" title="Alternar ordem">
+          <i class="bi bi-sort-alpha-down"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="suppliers-grid"></div>
+  </div>
+</div>

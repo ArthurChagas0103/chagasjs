@@ -1,0 +1,76 @@
+<div>
+  <div class="testimonial-header text-center mb-5 mt-4 fs-3">
+    Depoimentos de Usuários
+  </div>
+
+  <div
+    id="depoimentosCarousel"
+    class="carousel slide carousel-fade"
+    data-bs-ride="carousel"
+    data-bs-interval="5000"
+  >
+    <div class="carousel-inner"></div>
+    <div class="no-testimonials-placeholder d-none">
+      <div class="text-center">
+        <div class="mb-4">
+          <i class="bi bi-megaphone fs-1 text-muted"></i>
+        </div>
+        <h4 class="font-montserrat mb-3">Nenhum Depoimento Cadastrado</h4>
+        <p class="text-muted">
+          Seja o primeiro a compartilhar sua experiência!
+        </p>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#depoimentosCarousel"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#depoimentosCarousel"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Próximo</span>
+    </button>
+  </div>
+
+  <h4
+    class="text-center mb-4 mt-5"
+    style="font-family: 'Montserrat', sans-serif"
+  >
+    Deixe seu depoimento
+  </h4>
+  <form id="depoimentoForm" class="text-center">
+    <div class="mb-3" id="avaliacaoEstrelas"></div>
+    <input type="hidden" id="avaliacao" value="5" />
+    <div class="mb-3">
+      <input
+        type="text"
+        id="nome"
+        class="form-control"
+        placeholder="Seu nome"
+        required
+        autocomplete="off"
+        maxlength="50"
+      />
+    </div>
+    <div class="mb-3">
+      <textarea
+        id="comentario"
+        class="form-control"
+        placeholder="Seu comentário"
+        required
+        rows="4"
+        maxlength="671"
+      ></textarea>
+    </div>
+    <button type="submit" class="btn">Enviar Depoimento</button>
+  </form>
+</div>

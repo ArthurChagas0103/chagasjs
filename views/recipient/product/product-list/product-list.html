@@ -1,0 +1,32 @@
+<div class="container py-5">
+  <div
+    class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 gap-3"
+  >
+    <a
+      href="#shoppingCart"
+      class="btn custom-main-btn font-montserrat btn-circle-cart d-flex align-items-center gap-2"
+    >
+      <span id="cart-total-quantity" class="badge bg-green-leaf me-2">0</span>
+      <span id="cart-total-value" class="badge bg-green-mint-soft text-dark"
+        >R$ 0.00</span
+      >
+      <!-- Esse icone de carrinho é nativo do bootstrap -->
+      <i class="bi bi-cart4 fs-5"></i>
+    </a>
+  </div>
+
+  <div class="mb-4">
+    <input
+      type="text"
+      id="product-filter-input"
+      class="form-control"
+      placeholder="Filtrar produtos por nome ou descrição..."
+      autocomplete="off"
+    />
+  </div>
+
+  <div id="products-list" class="row g-4 mt-3 justify-content-center">
+    <!-- Cards dos produtos serão inseridos aqui dinamicamente via Javascript -->
+    <div class="col-12 text-center text-muted dark-gray"></div>
+  </div>
+</div>

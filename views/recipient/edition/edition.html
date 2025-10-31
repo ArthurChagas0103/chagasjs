@@ -1,0 +1,128 @@
+<div class="form-section">
+  <div class="py-5">
+  <div class="row justify-content-center">
+    <div class="card p-4 shadow-sm" style="max-width: 700px; width: 100%">
+      <div class="text-center mb-3">
+        <h2 class="title">Editar Perfil</h2>
+      </div>
+      <form id="formPerfil">
+        <div class="card mt-4">
+          <div class="card-body">
+            <h3 class="card-title texto-principal">Dados Gerais</h3>
+            <div class="mb-3">
+              <label for="nome" class="form-label texto-principal">Nome Completo</label>
+              <input id="nome" name="nome" type="text" class="form-control bg-menta" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="cpf" class="form-label texto-principal">CPF</label>
+              <input id="cpf" name="cpf" type="text" class="form-control bg-menta" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label texto-principal">E-mail</label>
+              <input id="email" name="email" type="email" class="form-control bg-menta" required />
+              <div class="invalid-feedback">
+                Por favor, insira um endereço de e-mail válido.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="telefone" class="form-label texto-principal">Telefone</label>
+              <input id="telefone" name="telefone" type="tel" class="form-control bg-menta" required />
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-4">
+          <div class="card-body">
+            <h3 class="card-title texto-principal">Endereço</h3>
+            <div class="mb-3">
+              <label for="cep" class="form-label texto-principal">CEP</label>
+              <input id="cep" name="cep" type="text" class="form-control bg-menta" required />
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="rua" class="form-label texto-principal">Rua</label>
+                <input id="rua" name="rua" type="text" class="form-control bg-menta" readonly required />
+              </div>
+              <div class="col-md-2">
+                <label for="numero" class="form-label texto-principal">Número</label>
+                <input id="numero" name="numero" type="text" class="form-control bg-menta" required />
+              </div>
+              <div class="col-md-4">
+                <label for="bairro" class="form-label texto-principal">Bairro</label>
+                <input id="bairro" name="bairro" type="text" class="form-control bg-menta" readonly required />
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="cidade" class="form-label texto-principal">Cidade</label>
+                <input id="cidade" name="cidade" type="text" class="form-control bg-menta" readonly required />
+              </div>
+              <div class="col-md-6">
+                <label for="estado" class="form-label texto-principal">Estado</label>
+                <select id="estado" name="estado" class="form-control bg-menta" disabled required>
+                  <option value="">Selecione um estado</option>
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="text-muted mt-2">Alguns campos são definidos a partir do CEP. Modificar o CEP afetará as demais informações.</p>
+
+        <div class="card mt-4">
+          <div class="card-body">
+            <h3 class="card-title texto-principal">Altere sua Senha</h3>
+            <div class="mb-3">
+              <label class="form-label texto-principal">Senha atual:</label>
+              <input type="password" class="form-control bg-menta" id="senhaAtual" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label texto-principal">Nova senha:</label>
+              <input type="password" class="form-control bg-menta" id="novaSenha" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label texto-principal">Confirmar nova senha:</label>
+              <input type="password" class="form-control bg-menta" id="confirmarSenha" />
+            </div>
+          </div>
+        </div>
+        <div class="text-end">
+          <button type="submit" class="btn btn-salvar mt-2">
+            Salvar alterações
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

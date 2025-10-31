@@ -1,0 +1,269 @@
+<link rel="stylesheet" href="assets/css/supplier/header.css" />
+
+<header class="bg-green-leaf text-white p-3 font-montserrat fixed-top">
+  <div
+    class="container-fluid d-flex justify-content-between align-items-center"
+  >
+    <a href="#createProduct" class="text-decoration-none">
+      <img
+        src="assets/img/logos/principal-branco-sem-fundo.png"
+        alt="Save&Serve Logo"
+        height="40"
+        class="me-4"
+      />
+    </a>
+
+    <div class="dropdown ms-auto">
+      <button
+        class="btn btn-outline-light dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        id="accountBtn"
+      >
+        <i class="bi bi-person"></i> Conta
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountBtn">
+        <li>
+          <a class="dropdown-item" href="#editionSupplier"
+            ><i class="bi bi-person"></i> Meu Perfil</a
+          >
+        </li>
+        <li><hr class="dropdown-divider" /></li>
+        <li>
+          <a class="dropdown-item" href="#" onclick="exitProfile(event)"
+            ><i class="bi bi-box-arrow-right"></i> Sair</a
+          >
+        </li>
+      </ul>
+    </div>
+    <button
+      class="navbar-toggler d-md-none border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarContent"
+      aria-controls="navbarContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="collapse navbar-collapse d-md-none" id="navbarContent">
+    <nav class="d-flex flex-column mt-3">
+      <div class="dropdown mb-2">
+        <button
+          class="btn btn-outline-light w-100 dropdown-toggle"
+          type="button"
+          id="dropdownProdutosMobile"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="bi bi-box-seam"></i> Produtos
+        </button>
+        <ul
+          class="dropdown-menu w-100"
+          aria-labelledby="dropdownProdutosMobile"
+        >
+          <li>
+            <a class="dropdown-item" href="#createProduct"
+              ><i class="bi bi-plus"></i> Cadastrar</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href="#viewProducts"
+              ><i class="bi bi-list"></i> Listagem</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="dropdown mb-2">
+        <button
+          class="btn btn-outline-light w-100 dropdown-toggle"
+          type="button"
+          id="dropdownPedidosMobile"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="bi bi-receipt"></i> Pedidos
+        </button>
+        <ul class="dropdown-menu w-100" aria-labelledby="dropdownPedidosMobile">
+          <li>
+            <a class="dropdown-item" href="#orderList"
+              ><i class="bi bi-list"></i> Listagem</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="dropdown mb-2">
+        <button
+          class="btn btn-outline-light w-100 dropdown-toggle"
+          type="button"
+          id="dropdownMarketingMobile"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="bi bi-bar-chart-line"></i> Marketing
+        </button>
+        <ul
+          class="dropdown-menu w-100"
+          aria-labelledby="dropdownMarketingMobile"
+        >
+          <li>
+            <a
+              class="dropdown-item"
+              href="#sendMessageMarketing"
+              class="nav-link ps-5 bg-submenu"
+              ><i class="bi bi-send"></i> Enviar Mensagem</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              href="#sentMessagesMarketing"
+              class="nav-link ps-5 bg-submenu"
+              ><i class="bi bi-envelope"></i> Mensagens Enviadas</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="dropdown mb-2">
+        <button
+          class="btn btn-outline-light w-100 dropdown-toggle"
+          type="button"
+          id="dropdownContaMobile"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="bi bi-person"></i> Conta
+        </button>
+        <ul class="dropdown-menu w-100" aria-labelledby="dropdownContaMobile">
+          <li>
+            <a class="dropdown-item" href="#editionSupplier"
+              ><i class="bi bi-person"></i> Meu Perfil</a
+            >
+          </li>
+          <li><hr class="dropdown-divider" /></li>
+          <li>
+            <a class="dropdown-item" href="#" onclick="exitProfile(event)">
+              <i class="bi bi-box-arrow-right"></i> Sair
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<aside id="sidebar" class="sidebar collapsed d-none d-md-block">
+  <button
+    id="sidebarToggleBtn"
+    class="sidebar-toggler"
+    onclick="toggleSidebar()"
+  >
+    <i class="bi bi-list" id="sidebarToggleBtnIcon"></i>
+  </button>
+
+  <nav class="nav flex-column">
+    <div class="nav-item has-submenu">
+      <a href="#" class="nav-link" onclick="toggleSubmenu(event)">
+        <i class="bi bi-box-seam"></i><span>Produtos</span>
+        <i class="bi bi-chevron-right ms-auto arrowSubMenu"></i>
+      </a>
+      <div class="submenu">
+        <a href="#createProduct" class="nav-link ps-5 bg-submenu"
+          ><i class="bi bi-plus"></i>Cadastrar</a
+        >
+        <a href="#viewProducts" class="nav-link ps-5 bg-submenu"
+          ><i class="bi bi-list"></i>Listagem</a
+        >
+      </div>
+    </div>
+
+    <div class="nav-item has-submenu">
+      <a href="#" class="nav-link" onclick="toggleSubmenu(event)">
+        <i class="bi bi-receipt"></i><span>Pedidos</span>
+        <i class="bi bi-chevron-right ms-auto arrowSubMenu"></i>
+      </a>
+      <div class="submenu">
+        <a href="#orderList" class="nav-link ps-5 bg-submenu"
+          ><i class="bi bi-list"></i>Listagem</a
+        >
+      </div>
+    </div>
+
+    <div class="nav-item has-submenu">
+      <a href="#" class="nav-link" onclick="toggleSubmenu(event)">
+        <i class="bi bi-percent"></i><span>Cupons</span>
+        <i class="bi bi-chevron-right ms-auto arrowSubMenu"></i>
+      </a>
+      <div class="submenu">
+        <a href="#coupons" class="nav-link ps-5 bg-submenu"
+          ><i class="bi bi-list"></i>Cupons</a
+        >
+      </div>
+    </div>
+
+    <div class="nav-item has-submenu">
+      <a href="#" class="nav-link" onclick="toggleSubmenu(event)">
+        <i class="bi bi-bar-chart-line"></i><span>Marketing</span>
+        <i class="bi bi-chevron-right ms-auto arrowSubMenu"></i>
+      </a>
+      <div class="submenu">
+        <a href="#sendMessageMarketing" class="nav-link ps-5 bg-submenu"
+          ><i class="bi bi-send"></i>Enviar Mensagem</a
+        >
+        <a href="#sentMessagesMarketing" class="nav-link ps-5 bg-submenu"
+          ><i class="bi bi-envelope"></i>Mensagens Enviadas</a
+        >
+      </div>
+    </div>
+  </nav>
+</aside>
+
+<div class="dropdown d-md-none ms-3">
+  <button
+    class="btn btn-outline-light dropdown-toggle"
+    type="button"
+    id="mobileMenuBtn"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    Menu
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end" id="mobileDropdown">
+    <li><h6 class="dropdown-header">Produtos</h6></li>
+    <li>
+      <a class="dropdown-item" href="#createProduct"
+        ><i class="bi bi-plus"></i> Cadastrar</a
+      >
+    </li>
+    <li>
+      <a class="dropdown-item" href="#viewProducts"
+        ><i class="bi bi-list"></i> Listagem</a
+      >
+    </li>
+    <li><hr class="dropdown-divider" /></li>
+    <li><h6 class="dropdown-header">Pedidos</h6></li>
+    <li>
+      <a class="dropdown-item" href="#orderList"
+        ><i class="bi bi-list"></i> Listagem</a
+      >
+    </li>
+    <li><hr class="dropdown-divider" /></li>
+    <li><h6 class="dropdown-header">Marketing</h6></li>
+    <li>
+      <a class="dropdown-item" href="#sendMessageMarketing"
+        ><i class="bi bi-send"></i> Enviar Mensagem</a
+      >
+    </li>
+    <li>
+      <a class="dropdown-item" href="#sentMessagesMarketing"
+        ><i class="bi bi-envelope"></i>Mensagens Enviadas</a
+      >
+    </li>
+  </ul>
+</div>

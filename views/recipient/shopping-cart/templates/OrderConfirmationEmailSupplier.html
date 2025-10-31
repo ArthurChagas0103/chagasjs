@@ -1,0 +1,48 @@
+<div id="email-template" style="font-family: Arial, sans-serif; color: #333">
+  <p style="font-size: 16px">Olá, {{name}}!</p>
+
+  <p style="font-size: 16px">Um pedido foi realizado!</p>
+
+  <p style="font-size: 16px">Detalhes do pedido:</p>
+
+  <table
+    style="
+      width: 100%;
+      max-width: 500px;
+      border-collapse: collapse;
+      font-size: 14px;
+    "
+  >
+    <tbody>
+      {{itens}} {{#if hasDiscount}}
+      <tr>
+        <td style="padding: 8px; border-top: 1px solid #ccc">
+          <strong>Total:</strong>
+        </td>
+        <td style="padding: 8px; border-top: 1px solid #ccc">
+          Preço Original: <s>R$ {{totalValueNum}}</s><br />
+          <strong style="color: #2e7d32"
+            >Total com Desconto: R$ {{finalValueNum}}</strong
+          >
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 8px"><strong>Você economizou:</strong></td>
+        <td style="padding: 8px; color: #d32f2f">
+          <strong>R$ {{savedAmountNum}}</strong>
+        </td>
+      </tr>
+      {{/if}}
+      <tr>
+        <td style="padding: 8px; border-top: 1px solid #ccc">
+          <strong>Total:</strong>
+        </td>
+        <td style="padding: 8px; border-top: 1px solid #ccc">
+          R$ {{finalValueNum}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-size: 16px">Obrigado por fornecer os produtos!</p>
+</div>

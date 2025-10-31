@@ -1,0 +1,73 @@
+<div class="bg-light-cream py-5 d-flex justify-content-center align-items-center">
+  <section class="create-coupon-section card shadow-lg border-0 rounded-4 p-4 w-100" style="max-width: 1000px">
+    <header class="mb-4 text-center">
+      <h2 class="font-montserrat mb-1 green-dark">Gerenciar Cupons</h2>
+      <p class="text-muted font-open-sans" style="font-size: 1rem">
+        Crie, edite ou exclua cupons promocionais para seus clientes.
+      </p>
+    </header>
+    <form id="couponForm" class="coupon-form font-montserrat mb-4" autocomplete="off">
+      <div class="row g-3">
+        <div class="row mb-3">
+            <div class="col-12 col-md-6">
+                <label for="couponId" class="form-label">Cupom ID</label>
+                <input type="text" class="form-control form-control-plaintext ps-2" id="couponId" name="couponId" value="" readonly>
+            </div>
+        </div>
+      </div>
+      <div class="row g-3 mt-2">
+        <div class="col-12 col-md-6">
+          <label for="code" class="form-label">Código para resgatar Cupom<span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="code" name="code" placeholder="Ex: DESCONTO10" required />
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="discount" class="form-label">Desconto (%)<span class="text-danger">*</span></label>
+          <input type="number" class="form-control" id="discount" name="discount" placeholder="Ex: 10" min="1" max="100" required />
+        </div>
+      </div>
+      <div class="row g-3 mt-1">
+        <div class="col-12 col-md-6">
+          <label for="expirationDate" class="form-label">Data de Validade<span class="text-danger">*</span></label>
+          <input type="date" class="form-control" id="expirationDate" name="expirationDate" required />
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="quantity" class="form-label">Quantidade Disponível<span class="text-danger"></span></label>
+          <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Ex: 50" min="1" />
+        </div>
+      </div>
+      <div class="row g-3 mt-1">
+        <div class="col-12">
+          <label for="description" class="form-label">Descrição</label>
+          <textarea class="form-control" id="description" name="description" rows="2" placeholder="Descreva as condições do cupom"></textarea>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 offset-md-3 mt-1">
+        <button type="submit" class="btn btn-dark w-100 font-montserrat mt-2" id="saveCouponButton">
+          <i class="bi bi-save"></i>
+          <span>Salvar cupom</span>
+        </button>
+      </div>
+    </form>
+    <button type="button" class="btn btn-secondary w-100 font-montserrat mt-2 invisible" id="stopEditingButton">
+      <i class="bi bi-x-circle"></i>
+      <span>Parar edição</span>
+    </button>
+    <div class="table-responsive mt-3 border-top">
+      <table class="table align-middle mb-0 table-borderless table-sm text-nowrap">
+        <thead class="border-bottom">
+          <tr class="text-muted small text-uppercase">
+            <th>Código</th>
+            <th>Desconto</th>
+            <th>Validade</th>
+            <th>Qtd</th>
+            <th>Descrição</th>
+            <th class="text-center">Ações</th>
+          </tr>
+        </thead>
+        <tbody id="couponTableBody" class="invisible">
+          <!-- Cupons serão renderizados aqui dinamicamente pelo couponsController.js -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>

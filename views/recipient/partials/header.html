@@ -1,0 +1,180 @@
+<link rel="stylesheet" href="assets/css/recipient/header.css" />
+
+<header class="bg-green-leaf text-white p-3 font-montserrat fixed-top">
+  <div
+    class="container-fluid d-flex justify-content-between align-items-center"
+  >
+    <a href="#supplierList" class="text-decoration-none">
+      <img
+        src="assets/img/logos/principal-branco-sem-fundo.png"
+        alt="Save&Serve Logo"
+        height="40"
+        class="me-4"
+      />
+    </a>
+
+    <div class="dropdown ms-auto">
+      <button
+        class="btn btn-outline-light dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        id="accountBtn"
+      >
+        <i class="bi bi-person"></i> Conta
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountBtn">
+        <li>
+          <a class="dropdown-item" href="#editionRecipient"
+            ><i class="bi bi-person"></i> Meu Perfil</a
+          >
+        </li>
+        <li><hr class="dropdown-divider" /></li>
+        <li>
+          <a class="dropdown-item" href="#" onclick="exitProfile(event)"
+            ><i class="bi bi-box-arrow-right"></i> Sair</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <button
+      class="navbar-toggler d-md-none border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarContent"
+      aria-controls="navbarContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <div
+    class="collapse navbar-collapse d-md-none bg-green-leaf p-3"
+    id="navbarContent"
+  >
+    <nav class="d-flex flex-column">
+      <div class="dropdown mb-2">
+        <button
+          class="btn btn-outline-light w-100 dropdown-toggle"
+          type="button"
+          id="dropdownFornecedoresMobile"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="bi bi-people"></i> Fornecedores
+        </button>
+        <ul
+          class="dropdown-menu w-100"
+          aria-labelledby="dropdownFornecedoresMobile"
+        >
+          <li>
+            <a class="dropdown-item" href="#supplierList">
+              <i class="bi bi-list"></i> Listagem
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="dropdown mb-2">
+        <button
+          class="btn btn-outline-light w-100 dropdown-toggle"
+          type="button"
+          id="dropdownPedidosMobile"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="bi bi-receipt"></i> Pedidos
+        </button>
+        <ul class="dropdown-menu w-100" aria-labelledby="dropdownPedidosMobile">
+          <li>
+            <a class="dropdown-item" href="#myOrders">
+              <i class="bi bi-list-check"></i> Meus Pedidos
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <a
+        href="#shoppingCart"
+        class="btn btn-outline-light w-100 mb-2 text-start"
+      >
+        <i class="bi bi-cart"></i> Carrinho
+      </a>
+
+      <div class="dropdown mb-2">
+        <button
+          class="btn btn-outline-light w-100 dropdown-toggle"
+          type="button"
+          id="dropdownContaMobile"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="bi bi-person"></i> Conta
+        </button>
+        <ul class="dropdown-menu w-100" aria-labelledby="dropdownContaMobile">
+          <li>
+            <a class="dropdown-item" href="#dataEditingRecipient">
+              <i class="bi bi-person"></i> Meu Perfil
+            </a>
+          </li>
+          <li><hr class="dropdown-divider" /></li>
+          <li>
+            <a class="dropdown-item" href="#" onclick="exitProfile(event)">
+              <i class="bi bi-box-arrow-right"></i> Sair
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<aside
+  id="sidebar"
+  class="sidebar collapsed d-flex flex-column justify-content-between"
+>
+  <button
+    id="sidebarToggleBtn"
+    class="sidebar-toggler"
+    onclick="toggleSidebar()"
+  >
+    <i class="bi bi-list" id="sidebarToggleBtnIcon"></i>
+  </button>
+
+  <nav class="nav flex-column flex-grow-1">
+    <div>
+      <div class="nav-item has-submenu">
+        <a href="#" class="nav-link" onclick="toggleSubmenu(event)">
+          <i class="bi bi-people"></i><span>Fornecedores</span>
+          <i class="bi bi-chevron-right ms-auto arrowSubMenu"></i>
+        </a>
+        <div class="submenu">
+          <a href="#supplierList" class="nav-link ps-5 bg-submenu">
+            <i class="bi bi-list"></i>Listagem
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-item has-submenu">
+        <a href="#" class="nav-link" onclick="toggleSubmenu(event)">
+          <i class="bi bi-receipt"></i><span>Pedidos</span>
+          <i class="bi bi-chevron-right ms-auto arrowSubMenu"></i>
+        </a>
+        <div class="submenu">
+          <a href="#myOrders" class="nav-link ps-5 bg-submenu">
+            <i class="bi bi-list-check"></i>Meus Pedidos
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item mt-auto mb-3">
+      <a href="#shoppingCart" class="nav-link">
+        <i class="bi bi-cart"></i><span>Carrinho</span>
+      </a>
+    </div>
+  </nav>
+</aside>

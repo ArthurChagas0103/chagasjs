@@ -1,0 +1,116 @@
+<div class="container mt-5" id="productDetails">
+  <div
+    class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 gap-3"
+  >
+    <a
+      href="#productListRecipient"
+      class="btn custom-main-btn font-montserrat btn-circle"
+    >
+      <span class="d-flex align-items-center gap-2 mt-1">
+        <i class="bi bi-arrow-left fs-5"></i>
+        Voltar
+      </span>
+    </a>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="product-image-container">
+        <img
+          id="productImage"
+          alt="Imagem do Produto"
+          class="img-fluid rounded"
+          aria-describedby="productImage"
+        />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="product-info">
+        <h1 id="productName" class="font-montserrat mb-3"></h1>
+        <p id="productDescription" class="font-open-sans text-muted mb-4"></p>
+
+        <div class="mb-4">
+          <div class="d-flex align-items-center">
+            <span class="font-montserrat fs-5 text-secondary me-2"
+              >Tipo de Oferta:</span
+            >
+            <span id="productOfferType" class="badge bg-success fs-6"></span>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center mb-4">
+          <h2 id="productPrice" class="font-montserrat me-3 mb-0"></h2>
+        </div>
+
+        <div class="quantity-selector mb-4">
+          <label class="font-montserrat fs-5 me-2">Quantidade:</label>
+          <div class="d-flex align-items-center">
+            <button
+              class="btn btn-outline-success btn-sm me-2"
+              id="decreaseQuantity"
+            >
+              <i class="bi bi-dash"></i>
+            </button>
+            <input
+              type="number"
+              id="productQuantityInput"
+              class="form-control form-control-sm text-center"
+              min="1"
+              max="10"
+              value="1"
+              style="width: 60px"
+            />
+            <button
+              class="btn btn-outline-success btn-sm ms-2"
+              id="increaseQuantity"
+            >
+              <i class="bi bi-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="d-grid">
+          <button class="btn btn-success btn-lg" id="addToCartButton">
+            <i class="bi bi-cart-plus me-2"></i>
+            Adicionar ao Carrinho
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3 class="font-montserrat mb-3">Detalhes Adicionais</h3>
+      <div class="details-container">
+        <div class="row">
+          <div class="col-sm-4 font-montserrat fs-5 text-secondary">
+            Categoria:
+          </div>
+          <div id="productCategory" class="col-sm-8 font-open-sans fs-5"></div>
+
+          <div class="col-sm-4 font-montserrat fs-5 text-secondary">
+            Disponível:
+          </div>
+          <div id="productQuantity" class="col-sm-8 font-open-sans fs-5"></div>
+
+          <div class="col-sm-4 font-montserrat fs-5 text-secondary">
+            Validade:
+          </div>
+          <div
+            id="productExpirationDate"
+            class="col-sm-8 font-open-sans fs-5"
+          ></div>
+
+          <div class="col-sm-4 font-montserrat fs-5 text-secondary">
+            Informação Nutricional:
+          </div>
+          <div
+            id="productNutritionalInfo"
+            class="col-sm-8 font-open-sans fs-5"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

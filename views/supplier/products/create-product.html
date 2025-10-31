@@ -1,0 +1,163 @@
+<div
+  class="bg-light-cream py-5 d-flex justify-content-center align-items-center min-vh-100"
+>
+  <section
+    class="create-product-section card shadow-lg border-0 rounded-4 p-4 w-100"
+    style="max-width: 540px"
+  >
+    <header class="mb-4 text-center">
+      <h2 class="font-montserrat mb-1 green-dark">Cadastrar Novo Produto</h2>
+      <p class="text-muted font-open-sans" style="font-size: 1rem">
+        Preencha os campos obrigatórios para cadastrar um novo produto.
+      </p>
+    </header>
+    <form
+      id="productForm"
+      class="product-form font-montserrat"
+      autocomplete="off"
+    >
+      <div class="mb-3">
+        <label for="name" class="form-label"
+          >Nome do Produto<span class="text-danger">*</span></label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          placeholder="Ex: Arroz Integral"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label"
+          >Descrição<span class="text-danger">*</span></label
+        >
+        <textarea
+          class="form-control"
+          id="description"
+          name="description"
+          rows="3"
+          placeholder="Descreva o produto em detalhes"
+          required
+        ></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="category" class="form-label"
+          >Categoria<span class="text-danger">*</span></label
+        >
+        <select class="form-select" id="category" name="category" required>
+          <option value="" selected disabled>Selecione uma categoria</option>
+          <option value="alimentos">Alimentos</option>
+          <option value="bebidas">Bebidas</option>
+          <option value="higiene">Higiene</option>
+          <option value="limpeza">Limpeza</option>
+          <option value="outros">Outros</option>
+        </select>
+      </div>
+      <div class="row g-3 mb-3">
+        <div class="col-12 col-md-6">
+          <label for="quantity" class="form-label"
+            >Quantidade Disponível<span class="text-danger">*</span></label
+          >
+          <div class="input-group">
+            <input
+              type="number"
+              class="form-control"
+              id="quantity"
+              name="quantity"
+              placeholder="Ex: 10"
+              min="1"
+              required
+            />
+            <span class="input-group-text">Unidades</span>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="expirationDate" class="form-label"
+            >Data de Validade<span class="text-danger">*</span></label
+          >
+          <input
+            type="date"
+            class="form-control"
+            id="expirationDate"
+            name="expirationDate"
+            required
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Imagem do Produto</label>
+        <input
+          type="file"
+          class="form-control"
+          id="image"
+          name="image"
+          accept="image/*"
+          required
+        />
+        <div class="form-text">
+          Adicione uma imagem do produto para melhor visualização.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="nutritionalInfo" class="form-label"
+          >Informações Nutricionais</label
+        >
+        <textarea
+          class="form-control"
+          id="nutritionalInfo"
+          name="nutritionalInfo"
+          rows="2"
+          placeholder="Ex: Rico em proteínas, baixo teor de gordura"
+        ></textarea>
+        <div class="form-text">
+          Informações nutricionais relevantes (opcional)
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label"
+          >Preço (R$)<span class="text-danger">*</span></label
+        >
+        <input
+          type="number"
+          class="form-control"
+          id="price"
+          name="price"
+          placeholder="Ex: 5.00 (0 para Doação)"
+          min="0"
+          step="0.01"
+          required
+        />
+        <div class="form-text">
+          Se o preço for <strong>0</strong>, o produto será cadastrado como
+          <strong>Doação (Gratuito)</strong>.
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="btn btn-dark w-100 font-montserrat mt-2"
+        id="createProductButton"
+      >
+        <span class="d-flex align-items-center justify-content-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi bi-plus-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
+            />
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+            />
+          </svg>
+          Cadastrar Produto
+        </span>
+      </button>
+    </form>
+  </section>
+</div>

@@ -1,0 +1,45 @@
+<div class="bg-light-cream" style="padding: 2rem">
+  <h1 class="green-dark font-montserrat">Pedidos</h1>
+
+  <div
+    class="filtros"
+    style="margin-bottom: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap"
+  >
+    <select>
+      <option value="" disabled selected>Status</option>
+      <option value="todos">Todos</option>
+      <option value="entregue">Entregue</option>
+      <option value="processando">Em Processamento</option>
+      <option value="transporte">Em Transporte</option>
+      <option value="cancelado">Cancelado</option>
+    </select>
+
+    <select>
+      <option value="" disabled selected>Período</option>
+      <option value="7-dias">Últimos 7 dias</option>
+      <option value="30-dias">Últimos 30 dias</option>
+      <option value="todos">Todos</option>
+    </select>
+
+    <input type="text" placeholder="Número do pedido ou nome do fornecedor" />
+  </div>
+  <div class="table-wrapper">
+    <table style="width: 100%; border-collapse: collapse">
+      <thead>
+        <tr style="background-color: #a5d6a7">
+          <th style="padding: 10px; cursor: pointer">Nº do Pedido</th>
+          <th style="padding: 10px; cursor: pointer">Data</th>
+          <th style="padding: 10px; cursor: pointer">Fornecedor</th>
+          <th style="padding: 10px">Itens</th>
+          <th style="padding: 10px; cursor: pointer">Valor Total</th>
+          <th style="padding: 10px">Status</th>
+          <th style="padding: 10px">Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaPedidos" class="dark-gray"></tbody>
+    </table>
+    <div class="empty-state" style="display: none">
+      <p class="empty-state-message"></p>
+    </div>
+  </div>
+</div>
